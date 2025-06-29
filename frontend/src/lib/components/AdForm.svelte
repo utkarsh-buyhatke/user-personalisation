@@ -1021,20 +1021,6 @@
 		error = null;
 		success = null;
 
-		// Validate generic name is in the allowed list
-		if (!validGenericNames.includes(selectedGenericName.toLowerCase())) {
-			error = 'Please select a valid generic name from the suggestions.';
-			loading = false;
-			return;
-		}
-
-		// Validate brand name is in the allowed list
-		if (!validBrandNames.includes(brandName.toLowerCase())) {
-			error = 'Please select a valid brand name from the suggestions.';
-			loading = false;
-			return;
-		}
-
 		try {
 			const params = new URLSearchParams();
 			params.append('cityTier', selectedCityTier === 'No Tier' ? '' : selectedCityTier);
